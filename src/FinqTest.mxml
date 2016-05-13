@@ -5,37 +5,49 @@
 	
 	<fx:Script>
 		<![CDATA[
-			import UnitTests;
+			import load.ModelData;
 			protected function button1_clickHandler(event:MouseEvent):void
 			{
-				var test : UnitTests = new UnitTests();
-				test.test_except();
-				test.test_aggregate();
-				test.test_all();
-				test.test_any();
-				test.test_asEnumerable();
-				test.test_average();
-				test.test_cast();
-				test.test_concat();
-				test.test_defaultIfEmpty();
-				test.test_distinct();
-				test.test_elementAt();
-				test.test_elementAtorDefault();
-				test.test_except();
-				test.test_first();
-				test.test_firstOrDefault();
-				test.test_getElementKeys();
-				test.test_groupBy();
-				test.test_groupJoin();
-				test.test_intersects();
-				test.test_join();
-				test.test_last();
-				test.test_lastOrDefault();
-				test.test_max();
-				test.test_min();
-				test.test_nonPrimitives();
-				test.test_ofType();
-				test.test_where();
+				var test : ModelData = new ModelData();
+				
+				var fontArr:Array = Font.enumerateFonts(true)
+				for each (var font:Font in fontArr) {
+					trace("系统中有的字体：",font.fontName);
+					if (font.fontName == "SegoePrint") {
+						trace("系统中有该字体，无需加载");
+						break;
+					}
+				}				
+				//return ;
+				
+//				var test : UnitTests = new UnitTests();
+//				test.test_except();
+//				test.test_aggregate();
+//				test.test_all();
+//				test.test_any();
+//				test.test_asEnumerable();
+//				test.test_average();
+//				test.test_cast();
+//				test.test_concat();
+//				test.test_defaultIfEmpty();
+//				test.test_distinct();
+//				test.test_elementAt();
+//				test.test_elementAtorDefault();
+//				test.test_except();
+//				test.test_first();
+//				test.test_firstOrDefault();
+//				test.test_getElementKeys();
+//				test.test_groupBy();
+//				test.test_groupJoin();
+//				test.test_intersects();
+//				test.test_join();
+//				test.test_last();
+//				test.test_lastOrDefault();
+//				test.test_max();
+//				test.test_min();
+//				test.test_nonPrimitives();
+//				test.test_ofType();
+//				test.test_where();
 			}
 		]]>
 	</fx:Script>
