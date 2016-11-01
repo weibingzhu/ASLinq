@@ -8,7 +8,7 @@ ASLinq是模仿C#中的Linq（https://msdn.microsoft.com/zh-cn/library/bb397926.
 
 
 该什么用？<br>
- ASLinq（）构造必须是一个Array。<vr>
+ ASLinq（）构造必须是一个Array。<br>
     private var people:IEnumerable = new ASLinq([ <br>
 		    {name:"Allen Frances", age:11, canCode:false}, <br>
 		    {name:"Burke Madison", age:50, canCode:true}, <br>
