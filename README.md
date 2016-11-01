@@ -7,22 +7,22 @@ ASLinq是模仿C#中的Linq（https://msdn.microsoft.com/zh-cn/library/bb397926.
 可以很快的从集合数据中获取你想要的，不再需要写for.....if....，代码更加简单,干净.
 
 
-该什么用？
-    private var people:IEnumerable = new ASLinq([ 
-		    {name:"Allen Frances", age:11, canCode:false}, 
-		    {name:"Burke Madison", age:50, canCode:true}, 
-		    {name:"David Charles", age:33, canCode:true}, 
-		    {name:"Connor Morgan", age:50, canCode:false}, 
-		    {name:"Everett Frank", age:16, canCode:true} 
-		]
+该什么用？<br>
+    private var people:IEnumerable = new ASLinq([ <br>
+		    {name:"Allen Frances", age:11, canCode:false}, <br>
+		    {name:"Burke Madison", age:50, canCode:true}, <br>
+		    {name:"David Charles", age:33, canCode:true}, <br>
+		    {name:"Connor Morgan", age:50, canCode:false}, <br>
+		    {name:"Everett Frank", age:16, canCode:true} <br>
+		]<br>
    ASLinq（）构造必须是一个Array。
    
-   var result : IEnumerable = people.where(function(x) { return x.name == "Burke Madison"; });
-    返回的是满足t条件的Array。
-    如：
-      var data:IEnumerable = new ASLinq([6, 8, 3, 4, 7]);
-			var result:IEnumerable = data.where(
-				function(x) {return x > 5;}
+   var result : IEnumerable = people.where(function(x) { return x.name == "Burke Madison"; });<br>
+    返回的是满足条件的Array。
+    如：<br>
+      var data:IEnumerable = new ASLinq([6, 8, 3, 4, 7]);<br>
+			var result:IEnumerable = data.where(<br>
+				function(x) {return x > 5;}<br>
 			);
       //result = [6, 8, 7]   
       
